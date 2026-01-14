@@ -3,7 +3,7 @@ package Assignment.Ass2;
 public class LibraryRecord {
 
     private String bookTitle;
-    private String borrowerName; // null if never borrowed
+    private String borrowerName;
     private int borrowDays;
     private boolean borrowed;
 
@@ -52,7 +52,7 @@ public class LibraryRecord {
     @Override
     public String toString() {
         String status = borrowed ? "Borrowed" : "Available";
-        String borrower = (borrowerName == null) ? "None" : borrowerName;
+        String borrower = borrowerName!=null ? borrowerName:"None";
 
         return "Book Title: " + bookTitle +
                 "\nBorrower: " + borrower +

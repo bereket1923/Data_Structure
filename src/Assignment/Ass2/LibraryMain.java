@@ -15,14 +15,10 @@ public class LibraryMain {
         records.add(new LibraryRecord("Clean Code", null, 0, false));
 
         // 3. Remove one record
-        records.remove(0); // removes "Data Structures"
+        records.remove(0);
 
-        // 4. Modify an existing record using setters
-        LibraryRecord r = records.get(2); // get "Clean Code"
-        r.setBookTitle("Clean Code (Updated)");
-        r.setBorrowerName(null);
-        r.setBorrowDays(0);
-        r.setBorrowed(false);
+        // 4. Modify an existing record using set()
+        records.set(2, new LibraryRecord("jump", "Alice", 5, true));
 
         // 5. Display total number of records
         System.out.println("Total Records: " + records.size());
@@ -31,7 +27,7 @@ public class LibraryMain {
         System.out.println("\nRecord at index 1:");
         System.out.println(records.get(1));
 
-        // Part C: Logic and Processing
+        // Logic and Processing
         int totalBorrowDays = 0;
 
         for (LibraryRecord rec : records) {
@@ -44,6 +40,6 @@ public class LibraryMain {
 
         // Clear all records
         records.clear();
-        System.out.println("Records after clear(): " + records.size());
+        System.out.println("Records after clear: " + records.size());
     }
 }
