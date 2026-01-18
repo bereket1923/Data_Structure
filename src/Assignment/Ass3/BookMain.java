@@ -29,14 +29,14 @@ public class BookMain {
         // ========================
         // LINEAR SEARCH (UNSORTED)
         // ========================
-        System.out.print("Enter book id to search (Linear Search): ");
+        System.out.print("Enter book id to search (Linear SearchAlgorithm): ");
         int searchId = sc.nextInt();
 
         int linearIndex = Book.linearSearch(books, searchId);
         if (linearIndex != -1) {
-            System.out.println("Book found (Linear Search): " + books[linearIndex]);
+            System.out.println("Book found (Linear SearchAlgorithm): " + books[linearIndex]);
         } else {
-            System.out.println("Book not found (Linear Search)");
+            System.out.println("Book not found (Linear SearchAlgorithm)");
         }
 
         // ========================
@@ -54,14 +54,14 @@ public class BookMain {
         // ========================
         // BINARY SEARCH (SORTED)
         // ========================
-        System.out.print("\nEnter book id to search (Binary Search): ");
+        System.out.print("\nEnter book id to search (Binary SearchAlgorithm): ");
         int binarySearchId = sc.nextInt();
 
         int binaryIndex = Book.binarySearch(books, binarySearchId);
         if (binaryIndex != -1) {
-            System.out.println("Book found (Binary Search): " + books[binaryIndex]);
+            System.out.println("Book found (Binary SearchAlgorithm): " + books[binaryIndex]);
         } else {
-            System.out.println("Book not found (Binary Search)");
+            System.out.println("Book not found (Binary SearchAlgorithm)");
         }
 
         sc.close();

@@ -40,7 +40,7 @@ class Book {
                 '}';
     }
 
-    // Linear Search (unsorted array)
+    // Linear SearchAlgorithm (unsorted array)
     public static int linearSearch(Book[] books, int target) {
         for (int i = 0; i < books.length; i++) {
             if (books[i].id == target) {
@@ -50,7 +50,7 @@ class Book {
         return -1;
     }
 
-    // Binary Search (sorted array)
+    // Binary SearchAlgorithm (sorted array)
     public static int binarySearch(Book[] books, int target) {
         int low = 0;
         int high = books.length - 1;
