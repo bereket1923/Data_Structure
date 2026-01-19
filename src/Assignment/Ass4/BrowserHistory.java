@@ -5,7 +5,6 @@ import java.util.Map;
 
 /**
  * BrowserHistory simulates a web browser’s history using a doubly linked list.
- *
  * head → First page visited (oldest)
  * tail → Most recently visited page
  * current → Page currently being viewed
@@ -72,10 +71,10 @@ public class BrowserHistory {
     private void deleteForwardHistory() {
         WebPage temp = current.next;
         while (temp != null) {
-            WebPage next = temp.next;
+            WebPage future = temp.next;// save current.next.next reference before break
             temp.prev = null; // break backward link
             temp.next = null; // break forward link
-            temp = next;
+            temp = future;//move temp to the next node
         }
         current.next = null;
         tail = current; // update tail
@@ -169,7 +168,7 @@ public class BrowserHistory {
         WebPage temp = head;
         while (temp != null) {
             if (temp == current)
-                System.out.print("[" + temp.url + "] ");
+                System.out.print("[" + temp.url + "] ");// mark the current page with brackets
             else
                 System.out.print(temp.url + " ");
             temp = temp.next;
